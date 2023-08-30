@@ -1,0 +1,18 @@
+<Route path="/business"><About/><News pageSize={6} country="in" category="
+<Route path="/entertainment"><About/><News pageSize={6} country="in" category="
+<Route path="/general"><About/><News pageSize={6} country="in" category="
+<Route path="/health"><About/><News pageSize={6} country="in" category="
+<Route path="/science"><About/><News pageSize={6} country="in" category="
+<Route path="/sports"><About/><News pageSize={6} country="in" category="
+<Route path="/technology"><About/><News pageSize={6} country="in" category="
+
+
+            <Route path="/bbbbb"><About/><News pageSize={6} country="in" category="technology"/></Route>
+
+business
+entertainment
+general
+health
+science
+sports
+technology
