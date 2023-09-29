@@ -3,7 +3,7 @@ import Newsitem from "./Newsitem";
 import Spinner from "./Spinner";
 import PropTypes from 'prop-types'
 import InfiniteScroll from "react-infinite-scroll-component";
-import axios from 'axios';
+// import axios from 'axios';
 
 
 const News = (props) => {
@@ -18,19 +18,13 @@ const News = (props) => {
     props.setProgress(10);
     let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     setLoading(true)
-
-
-    try {
-      const response = await axios.get(url); // Use Axios for the GET request
-      const parseData = response.data;
-      setArticles(parseData.articles);
-      setTotalResults(parseData.totalResults);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
+      let data = await fetch(url);
+      props.setProgress(40);
+      let parseData = await data.json();
+      setArticles(parseData.articles)
+      setTotalResults(parseData.totalResults)
+      setLoading(false)
       props.setProgress(100);
-    }
   }
 
   const capitalizeFirstLetter = str => {
@@ -40,7 +34,7 @@ const News = (props) => {
   useEffect(() => {
     document.title = `News - ${capitalizeFirstLetter(props.category)}`
     updateNews();
-  }, []);
+  }, [])
 
 // // use when you want to use button for next or previous
 //   const handlePrevieClick = async () => {
