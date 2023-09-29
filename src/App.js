@@ -1,6 +1,4 @@
 import "./App.css";
-
-// import React, { Component } from "react";
 import React, { useState } from "react";
 import News from "./components/News";
 import Nav from "./components/Nav";
@@ -8,14 +6,12 @@ import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
 import Footer from "./components/Footer";
 
-// export default class App extends Component {
   const App = () => {
   const pageSize = 6;
   const apiKey = process.env.REACT_APP_NEWS_API
 
   const [progress, setProgress] = useState(0)
 
-  // render() {
     return (
       <div>
           <Router>
@@ -24,7 +20,6 @@ import Footer from "./components/Footer";
             color='#f11946'
             progress={progress}
           />
-          {/* <News setProgress = {setProgress}  pageSize={pageSize} country="in" category="technology"/> */}
           <Routes>
             <Route exact path="/" element={<News setProgress = {setProgress} apiKey={apiKey} key="general" pageSize={pageSize} country="in" category="general"/>}></Route>
             <Route exact path="/business" element={<News setProgress = {setProgress} apiKey={apiKey} key="business" pageSize={pageSize} country="in" category="business"/>}></Route>
