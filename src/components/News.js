@@ -58,7 +58,7 @@ const fetchMoreData = async () => {
 
 
     return (
-      <div className="container my-3 pt-5">
+      <div className="container my-3 pt-5 mb-3">
         <h2 className="container my-3 text-center">TOP HEADLINES ABOUT - {uppercaseAll(props.category)}</h2>
         <hr className="border border-danger border-2 opacity-50 mb-5" />
         {loading && <Spinner/>}
