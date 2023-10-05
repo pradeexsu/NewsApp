@@ -7,7 +7,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 
 const News = (props) => {
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState([])
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1)
   const [totalResults, setTotalResults] = useState(0)
@@ -34,7 +34,7 @@ const News = (props) => {
   useEffect(() => {
     document.title = `News - ${capitalizeFirstLetter(props.category)}`
     updateNews();
-  }, [])
+  }, [props.category])
 
 // // use when you want to use button for next or previous
 //   const handlePrevieClick = async () => {
@@ -67,7 +67,7 @@ const fetchMoreData = async () => {
            dataLength={articles.length}
            next={fetchMoreData}
            hasMore={articles.length !== totalResults}
-           loader={<Spinner />}
+           loader={<Spinner/>}
           >
           <div className="container">
           <div className="row">
