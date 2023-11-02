@@ -1,10 +1,7 @@
-// import React, { Component } from "react";
 import React  from "react";
 
-// export class Newsitem extends Component {
   const Newsitem = (props) => {
 
-  // render() {
     let { title, description, imageUrl, newsUrl, author, date , source} = props;
 
     return (
