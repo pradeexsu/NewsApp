@@ -1,3 +1,8 @@
+<h2> --- Preview --- </h2>
+
+![Preview](https://github.com/Hitesh-Suthar12/NewsApp/assets/132213565/053f7b0b-9be8-44ce-abed-1374659d8294)
+<hr>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
